@@ -46,6 +46,13 @@
                     <span class="icp">{{ . | safeHTML }}</span>
                 {{- end -}}
             </div>
+
+            {{- /* Custom Content */ -}}
+            {{- with .Site.Params.footer.custom_bottom -}}
+                <div class="footer-line">
+                    {{- safeHTML . -}}
+                </div>
+            {{- end -}}
         </div>
     </footer>
 {{- end -}}
